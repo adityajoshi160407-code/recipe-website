@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delicious Recipes - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">🍳 Delicious Recipes</a>
+  <div class="nav-search">
+    <input type="text" id="searchInput" placeholder="Search recipes..." onkeydown="if(event.key==='Enter'){goSearch()}" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="recipe-pasta.html">Pasta</a></li>
+    <li><a href="recipe-butter-chicken.html">Butter Chicken</a></li>
+    <li><a href="tips.html">Tips</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Welcome to Delicious Recipes</h1>
+  <p>Simple, tasty, and easy-to-follow recipes for everyone.</p>
+  <a href="recipes.html" class="btn btn-outline">Browse Recipes</a>
+  <a href="about.html" class="btn btn-outline">About Us</a>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stat-item"><span class="stat-num">7+</span><span class="stat-label">Recipes</span></div>
+    <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Categories</span></div>
+    <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Homemade</span></div>
+  </div>
+</div>
+
+<!-- FEATURED RECIPES -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Featured Recipes</h2>
+    <p class="section-subtitle">Some of our most loved dishes</p>
+
+    <div class="grid-3">
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=75" alt="Pasta" />
+        <div class="card-body">
+          <span class="card-badge badge-veg">Veg</span>
+          <h3 class="card-title">Creamy Pasta Primavera</h3>
+          <p class="card-meta">⏱ 25 min &nbsp;|&nbsp; 🟢 Easy</p>
+          <p class="card-desc">A rich creamy pasta with fresh vegetables and white sauce.</p>
+          <a href="recipe-pasta.html" class="card-link">View Recipe →</a>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=500&q=75" alt="Butter Chicken" />
+        <div class="card-body">
+          <span class="card-badge badge-nonveg">Non-Veg</span>
+          <h3 class="card-title">Butter Chicken</h3>
+          <p class="card-meta">⏱ 45 min &nbsp;|&nbsp; 🟡 Medium</p>
+          <p class="card-desc">Classic Indian butter chicken with silky tomato-cream sauce.</p>
+          <a href="recipe-butter-chicken.html" class="card-link">View Recipe →</a>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=75" alt="Lava Cake" />
+        <div class="card-body">
+          <span class="card-badge badge-dessert">Dessert</span>
+          <h3 class="card-title">Chocolate Lava Cake</h3>
+          <p class="card-meta">⏱ 30 min &nbsp;|&nbsp; 🟡 Medium</p>
+          <p class="card-desc">Warm molten chocolate cake — the perfect dessert treat.</p>
+          <a href="recipe-lava-cake.html" class="card-link">View Recipe →</a>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=75" alt="Salad" />
+        <div class="card-body">
+          <span class="card-badge badge-veg">Veg</span>
+          <h3 class="card-title">Mediterranean Salad</h3>
+          <p class="card-meta">⏱ 10 min &nbsp;|&nbsp; 🟢 Easy</p>
+          <p class="card-desc">Fresh cucumber, tomato, olives, and feta with lemon dressing.</p>
+          <a href="recipe-salad.html" class="card-link">View Recipe →</a>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=75" alt="Pancakes" />
+        <div class="card-body">
+          <span class="card-badge badge-veg">Veg</span>
+          <h3 class="card-title">Fluffy Pancakes</h3>
+          <p class="card-meta">⏱ 20 min &nbsp;|&nbsp; 🟢 Easy</p>
+          <p class="card-desc">Thick and airy pancakes — perfect for a weekend breakfast.</p>
+          <a href="recipe-pancakes.html" class="card-link">View Recipe →</a>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=75" alt="Biryani" />
+        <div class="card-body">
+          <span class="card-badge badge-nonveg">Non-Veg</span>
+          <h3 class="card-title">Chicken Biryani</h3>
+          <p class="card-meta">⏱ 75 min &nbsp;|&nbsp; 🔴 Hard</p>
+          <p class="card-desc">Fragrant basmati rice layered with spiced chicken.</p>
+          <a href="recipe-biryani.html" class="card-link">View Recipe →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:24px;">
+      <a href="recipes.html" class="btn btn-primary">View All Recipes</a>
+    </p>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Browse by Category</h2>
+    <p class="section-subtitle">Filter by what you're in the mood for</p>
+    <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;">
+      <a href="recipes.html" class="btn btn-primary">🥦 Vegetarian</a>
+      <a href="recipes.html" class="btn btn-primary">🍗 Non-Vegetarian</a>
+      <a href="recipes.html" class="btn btn-primary">🍰 Desserts</a>
+      <a href="recipes.html" class="btn btn-primary">⚡ Quick &amp; Easy</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h2>Get New Recipes in Your Inbox</h2>
+  <p>Subscribe to stay updated with fresh recipes every week.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="your@email.com" />
+    <button class="btn btn-outline" onclick="alert('Subscribed! Thank you.')">Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🍳 Delicious Recipes</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="tips.html">Tips</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>Made with ❤️ by Aditya Joshi SAU</p>
+  <p>© 2026 Aditya Joshi SAU. All Rights Reserved.</p>
+</footer>
+
+<a href="#" class="scroll-top" id="scrollTop" title="Back to top">↑</a>
+
+<script>
+  function goSearch() {
+    var q = document.getElementById('searchInput').value.trim();
+    if (q) window.location.href = 'recipes.html?q=' + encodeURIComponent(q);
+  }
+
+  window.addEventListener('scroll', function () {
+    var btn = document.getElementById('scrollTop');
+    if (window.scrollY > 300) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
