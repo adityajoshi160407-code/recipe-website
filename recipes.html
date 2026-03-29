@@ -1,192 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>All Recipes - Delicious Recipes</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
-<nav class="navbar">
-  <a href="index.html" class="nav-logo">🍳 Delicious Recipes</a>
-  <div class="nav-search">
-    <input type="text" id="navSearch" placeholder="Search recipes..." oninput="filterAll()" />
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="recipes.html" class="active">Recipes</a></li>
-    <li><a href="recipe-pasta.html">Pasta</a></li>
-    <li><a href="recipe-butter-chicken.html">Butter Chicken</a></li>
-    <li><a href="tips.html">Tips</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="page-header">
-  <h1>All Recipes</h1>
-  <p>Browse, search, and filter your next favourite dish</p>
-</div>
-
-<section class="section">
-  <div class="container">
-
-    <!-- Search Bar -->
-    <div class="search-box">
-      <input type="text" id="mainSearch" placeholder="Search by name (e.g. pasta, chicken)..." oninput="filterAll()" />
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">🍳 Delicious Recipes</a>
+    <div class="nav-search">
+      <input type="text" id="navSearch" placeholder="Search recipes..." oninput="filterAll()" />
     </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html" class="active">Recipes</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Category Filter Buttons -->
-    <div class="category-filter">
-      <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
-      <button class="filter-btn" onclick="setFilter('veg', this)">🥦 Veg</button>
-      <button class="filter-btn" onclick="setFilter('non-veg', this)">🍗 Non-Veg</button>
-      <button class="filter-btn" onclick="setFilter('dessert', this)">🍰 Desserts</button>
-    </div>
-
-    <!-- No results message -->
-    <p id="noResults" style="display:none; color:#888; font-size:1rem; margin-bottom:16px;">
-      No recipes found. Try a different search or category.
-    </p>
-
-    <!-- Recipe Cards -->
-    <div class="grid-3" id="recipeGrid">
-
-      <div class="card" data-cat="veg" data-name="creamy pasta primavera">
-        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=75" alt="Pasta" />
-        <div class="card-body">
-          <span class="card-badge badge-veg">Veg</span>
-          <h3 class="card-title">Creamy Pasta Primavera</h3>
-          <p class="card-meta">⏱ 25 min &nbsp;|&nbsp; 🟢 Easy</p>
-          <p class="card-desc">Fresh vegetables in a rich white cream sauce with pasta.</p>
-          <a href="recipe-pasta.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-      <div class="card" data-cat="non-veg" data-name="butter chicken">
-        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=500&q=75" alt="Butter Chicken" />
-        <div class="card-body">
-          <span class="card-badge badge-nonveg">Non-Veg</span>
-          <h3 class="card-title">Butter Chicken</h3>
-          <p class="card-meta">⏱ 45 min &nbsp;|&nbsp; 🟡 Medium</p>
-          <p class="card-desc">Classic Indian butter chicken with tomato-cream sauce.</p>
-          <a href="recipe-butter-chicken.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-      <div class="card" data-cat="dessert" data-name="chocolate lava cake">
-        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=75" alt="Lava Cake" />
-        <div class="card-body">
-          <span class="card-badge badge-dessert">Dessert</span>
-          <h3 class="card-title">Chocolate Lava Cake</h3>
-          <p class="card-meta">⏱ 30 min &nbsp;|&nbsp; 🟡 Medium</p>
-          <p class="card-desc">Warm gooey molten chocolate cake — a dessert classic.</p>
-          <a href="recipe-lava-cake.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-      <div class="card" data-cat="veg" data-name="mediterranean salad">
-        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=75" alt="Salad" />
-        <div class="card-body">
-          <span class="card-badge badge-veg">Veg</span>
-          <h3 class="card-title">Mediterranean Salad</h3>
-          <p class="card-meta">⏱ 10 min &nbsp;|&nbsp; 🟢 Easy</p>
-          <p class="card-desc">Cucumber, tomato, olives and feta with lemon dressing.</p>
-          <a href="recipe-salad.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-      <div class="card" data-cat="veg" data-name="fluffy pancakes">
-        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=75" alt="Pancakes" />
-        <div class="card-body">
-          <span class="card-badge badge-veg">Veg</span>
-          <h3 class="card-title">Fluffy Pancakes</h3>
-          <p class="card-meta">⏱ 20 min &nbsp;|&nbsp; 🟢 Easy</p>
-          <p class="card-desc">Thick, airy pancakes perfect for a weekend morning.</p>
-          <a href="recipe-pancakes.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-      <div class="card" data-cat="non-veg" data-name="chicken biryani">
-        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=75" alt="Biryani" />
-        <div class="card-body">
-          <span class="card-badge badge-nonveg">Non-Veg</span>
-          <h3 class="card-title">Chicken Biryani</h3>
-          <p class="card-meta">⏱ 75 min &nbsp;|&nbsp; 🔴 Hard</p>
-          <p class="card-desc">Fragrant basmati rice layered with spiced chicken.</p>
-          <a href="recipe-biryani.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-      <div class="card" data-cat="dessert" data-name="mango kulfi">
-        <img src="https://images.unsplash.com/photo-1615478503562-ec2d8aa0e24e?w=500&q=75" alt="Kulfi" />
-        <div class="card-body">
-          <span class="card-badge badge-dessert">Dessert</span>
-          <h3 class="card-title">Mango Kulfi</h3>
-          <p class="card-meta">⏱ 15 min + freeze &nbsp;|&nbsp; 🟢 Easy</p>
-          <p class="card-desc">Creamy Indian ice cream with sweet mango flavour.</p>
-          <a href="recipe-lava-cake.html" class="card-link">View Recipe →</a>
-        </div>
-      </div>
-
-    </div>
+  <div class="page-header">
+    <h1>All Recipes</h1>
+    <p>Browse, search, and filter your next favourite dish</p>
   </div>
-</section>
 
-<footer>
-  <div class="footer-logo">🍳 Delicious Recipes</div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="recipes.html">Recipes</a>
-    <a href="tips.html">Tips</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <p>© 2026 Aditya Joshi SAU. All Rights Reserved.</p>
-</footer>
+  <section class="section">
+    <div class="container">
 
-<a href="#" class="scroll-top" id="scrollTop">↑</a>
+      <!-- Search Bar -->
+      <div class="search-box">
+        <input type="text" id="mainSearch" placeholder="Search by name (e.g. pasta, chicken)..."
+          oninput="filterAll()" />
+      </div>
 
-<script>
-  var currentFilter = 'all';
+      <!-- Category Filter Buttons -->
+      <div class="category-filter">
+        <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+        <button class="filter-btn" onclick="setFilter('veg', this)">🥦 Veg</button>
+        <button class="filter-btn" onclick="setFilter('non-veg', this)">🍗 Non-Veg</button>
+        <button class="filter-btn" onclick="setFilter('dessert', this)">🍰 Desserts</button>
+      </div>
 
-  // Check for URL search param on load
-  window.addEventListener('DOMContentLoaded', function () {
-    var params = new URLSearchParams(window.location.search);
-    var q = params.get('q');
-    if (q) {
-      document.getElementById('mainSearch').value = q;
+      <!-- No results message -->
+      <p id="noResults" style="display:none; color:#888; font-size:1rem; margin-bottom:16px;">
+        No recipes found. Try a different search or category.
+      </p>
+
+      <!-- Recipe Cards -->
+      <div class="grid-3" id="recipeGrid">
+
+        <div class="card" data-cat="veg" data-name="creamy pasta primavera">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=75" alt="Pasta" />
+          <div class="card-body">
+            <span class="card-badge badge-veg">Veg</span>
+            <h3 class="card-title">Creamy Pasta Primavera</h3>
+            <p class="card-meta">⏱ 25 min &nbsp;|&nbsp; 🟢 Easy</p>
+            <p class="card-desc">Fresh vegetables in a rich white cream sauce with pasta.</p>
+            <a href="recipe-pasta.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+        <div class="card" data-cat="non-veg" data-name="butter chicken">
+          <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=500&q=75" alt="Butter Chicken" />
+          <div class="card-body">
+            <span class="card-badge badge-nonveg">Non-Veg</span>
+            <h3 class="card-title">Butter Chicken</h3>
+            <p class="card-meta">⏱ 45 min &nbsp;|&nbsp; 🟡 Medium</p>
+            <p class="card-desc">Classic Indian butter chicken with tomato-cream sauce.</p>
+            <a href="recipe-butter-chicken.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+        <div class="card" data-cat="dessert" data-name="chocolate lava cake">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=75" alt="Lava Cake" />
+          <div class="card-body">
+            <span class="card-badge badge-dessert">Dessert</span>
+            <h3 class="card-title">Chocolate Lava Cake</h3>
+            <p class="card-meta">⏱ 30 min &nbsp;|&nbsp; 🟡 Medium</p>
+            <p class="card-desc">Warm gooey molten chocolate cake — a dessert classic.</p>
+            <a href="recipe-lava-cake.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+        <div class="card" data-cat="veg" data-name="mediterranean salad">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=75" alt="Salad" />
+          <div class="card-body">
+            <span class="card-badge badge-veg">Veg</span>
+            <h3 class="card-title">Mediterranean Salad</h3>
+            <p class="card-meta">⏱ 10 min &nbsp;|&nbsp; 🟢 Easy</p>
+            <p class="card-desc">Cucumber, tomato, olives and feta with lemon dressing.</p>
+            <a href="recipe-salad.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+        <div class="card" data-cat="veg" data-name="fluffy pancakes">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=75" alt="Pancakes" />
+          <div class="card-body">
+            <span class="card-badge badge-veg">Veg</span>
+            <h3 class="card-title">Fluffy Pancakes</h3>
+            <p class="card-meta">⏱ 20 min &nbsp;|&nbsp; 🟢 Easy</p>
+            <p class="card-desc">Thick, airy pancakes perfect for a weekend morning.</p>
+            <a href="recipe-pancakes.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+        <div class="card" data-cat="non-veg" data-name="chicken biryani">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=75" alt="Biryani" />
+          <div class="card-body">
+            <span class="card-badge badge-nonveg">Non-Veg</span>
+            <h3 class="card-title">Chicken Biryani</h3>
+            <p class="card-meta">⏱ 75 min &nbsp;|&nbsp; 🔴 Hard</p>
+            <p class="card-desc">Fragrant basmati rice layered with spiced chicken.</p>
+            <a href="recipe-biryani.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+        <div class="card" data-cat="dessert" data-name="mango kulfi">
+          <img src="https://images.unsplash.com/photo-1615478503562-ec2d8aa0e24e?w=500&q=75" alt="Kulfi" />
+          <div class="card-body">
+            <span class="card-badge badge-dessert">Dessert</span>
+            <h3 class="card-title">Mango Kulfi</h3>
+            <p class="card-meta">⏱ 15 min + freeze &nbsp;|&nbsp; 🟢 Easy</p>
+            <p class="card-desc">Creamy Indian ice cream with sweet mango flavour.</p>
+            <a href="recipe-lava-cake.html" class="card-link">View Recipe →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">🍳 Delicious Recipes</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="tips.html">Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 Aditya Joshi SAU. All Rights Reserved.</p>
+  </footer>
+
+  <a href="#" class="scroll-top" id="scrollTop">↑</a>
+
+  <script>
+    var currentFilter = 'all';
+
+    // Check for URL search param on load
+    window.addEventListener('DOMContentLoaded', function () {
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('q');
+      if (q) {
+        document.getElementById('mainSearch').value = q;
+        filterAll();
+      }
+    });
+
+    function setFilter(cat, btn) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
       filterAll();
     }
-  });
 
-  function setFilter(cat, btn) {
-    currentFilter = cat;
-    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-    filterAll();
-  }
+    function filterAll() {
+      var search = (document.getElementById('mainSearch').value || document.getElementById('navSearch').value || '').toLowerCase().trim();
+      var cards = document.querySelectorAll('#recipeGrid .card');
+      var visible = 0;
+      cards.forEach(function (card) {
+        var matchCat = currentFilter === 'all' || card.dataset.cat === currentFilter;
+        var matchName = !search || card.dataset.name.indexOf(search) !== -1;
+        card.style.display = (matchCat && matchName) ? '' : 'none';
+        if (matchCat && matchName) visible++;
+      });
+      document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+    }
 
-  function filterAll() {
-    var search = (document.getElementById('mainSearch').value || document.getElementById('navSearch').value || '').toLowerCase().trim();
-    var cards = document.querySelectorAll('#recipeGrid .card');
-    var visible = 0;
-    cards.forEach(function (card) {
-      var matchCat  = currentFilter === 'all' || card.dataset.cat === currentFilter;
-      var matchName = !search || card.dataset.name.indexOf(search) !== -1;
-      card.style.display = (matchCat && matchName) ? '' : 'none';
-      if (matchCat && matchName) visible++;
+    window.addEventListener('scroll', function () {
+      var btn = document.getElementById('scrollTop');
+      btn.style.opacity = window.scrollY > 300 ? '1' : '0';
+      btn.style.pointerEvents = window.scrollY > 300 ? 'auto' : 'none';
     });
-    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
-  }
-
-  window.addEventListener('scroll', function () {
-    var btn = document.getElementById('scrollTop');
-    btn.style.opacity = window.scrollY > 300 ? '1' : '0';
-    btn.style.pointerEvents = window.scrollY > 300 ? 'auto' : 'none';
-  });
-</script>
+  </script>
 
 </body>
+
 </html>

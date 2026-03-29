@@ -1,54 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cooking Tips - Delicious Recipes</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-<nav class="navbar">
-  <a href="index.html" class="nav-logo">🍳 Delicious Recipes</a>
-  <div class="nav-search"><input type="text" placeholder="Search recipes..." onkeydown="if(event.key==='Enter'){window.location.href='recipes.html?q='+this.value}" /></div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li><li><a href="recipes.html">Recipes</a></li>
-    <li><a href="recipe-pasta.html">Pasta</a></li><li><a href="recipe-butter-chicken.html">Butter Chicken</a></li>
-    <li><a href="tips.html" class="active">Tips</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-<div class="page-header"><h1>👨‍🍳 Cooking Tips</h1><p>Simple tips to help you cook better every day</p></div>
-<section class="section">
-  <div class="container" style="max-width:800px;">
-
-    <h2 class="section-title">Knife Skills</h2>
-    <br />
-    <div class="tip-card"><h3>🔪 Keep Your Knife Sharp</h3><p>A sharp knife is safer than a dull one. A dull blade requires extra force and can slip. Hone your knife before each use and sharpen it every few months.</p></div>
-    <div class="tip-card"><h3>🧅 Reduce Onion Tears</h3><p>Chill your onion for 15 minutes before cutting. Cold temperatures slow the release of compounds that irritate your eyes. Always use a very sharp knife.</p></div>
-    <div class="tip-card"><h3>🧄 Peel Garlic Quickly</h3><p>Place a clove under the flat side of your knife and press firmly. The skin slips right off — fast and easy.</p></div>
-
-    <br /><h2 class="section-title">Heat &amp; Cooking</h2><br />
-    <div class="tip-card"><h3>🔥 Preheat Your Pan</h3><p>Always preheat the pan before adding oil or food. A hot pan prevents sticking and gives better browning and flavour.</p></div>
-    <div class="tip-card"><h3>🍳 Don't Crowd the Pan</h3><p>Too many ingredients at once drops the temperature and causes steaming instead of frying. Cook in batches for best results.</p></div>
-    <div class="tip-card"><h3>🌡️ Use a Thermometer</h3><p>Check internal temperatures for meat — 75°C for chicken, 70°C for beef (medium). Guessing leads to over or undercooked food.</p></div>
-
-    <br /><h2 class="section-title">Flavour Tips</h2><br />
-    <div class="tip-card"><h3>🧂 Salt at Every Stage</h3><p>Season as you cook, not just at the end. A pinch of salt when sautéing vegetables, pasta water, and finishing builds deep flavour.</p></div>
-    <div class="tip-card"><h3>🍋 Use Acid to Brighten Dishes</h3><p>A squeeze of lemon or a dash of vinegar at the end lifts and brightens any dish without making it taste sour.</p></div>
-    <div class="tip-card"><h3>🌿 Time Your Herbs Right</h3><p>Hardy herbs like rosemary and thyme go in early. Delicate herbs like basil and coriander should only be added at the very end or as garnish.</p></div>
-
-    <br /><h2 class="section-title">Baking Basics</h2><br />
-    <div class="tip-card"><h3>⚖️ Measure Precisely</h3><p>Baking is science. Use a kitchen scale for accuracy — especially for flour, which varies a lot depending on how it's packed.</p></div>
-    <div class="tip-card"><h3>🧈 Use Room Temperature Ingredients</h3><p>Cold butter and eggs don't mix well and can cause batters to curdle. Take them out 30–60 minutes before baking.</p></div>
-    <div class="tip-card"><h3>🎂 Don't Open the Oven Early</h3><p>Opening the door in the first 3/4 of baking time causes temperature drops that can make cakes sink. Wait until the timer goes off.</p></div>
-
-    <br /><p style="text-align:center;"><a href="recipes.html" class="btn btn-primary">Browse All Recipes</a></p>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">🍳 Delicious Recipes</a>
+    <div class="nav-search"><input type="text" placeholder="Search recipes..."
+        onkeydown="if(event.key==='Enter'){window.location.href='recipes.html?q='+this.value}" /></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="tips.html" class="active">Tips</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="page-header">
+    <h1>👨‍🍳 Cooking Tips</h1>
+    <p>Simple tips to help you cook better every day</p>
   </div>
-</section>
-<footer>
-  <div class="footer-logo">🍳 Delicious Recipes</div>
-  <div class="footer-links"><a href="index.html">Home</a><a href="recipes.html">Recipes</a><a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-  <p>© 2026 Aditya Joshi SAU. All Rights Reserved.</p>
-</footer>
-<a href="#" class="scroll-top" id="scrollTop">↑</a>
-<script>window.addEventListener('scroll',function(){var b=document.getElementById('scrollTop');b.style.opacity=window.scrollY>300?'1':'0';b.style.pointerEvents=window.scrollY>300?'auto':'none';});</script>
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+
+      <h2 class="section-title">Knife Skills</h2>
+      <br />
+      <div class="tip-card">
+        <h3>🔪 Keep Your Knife Sharp</h3>
+        <p>A sharp knife is safer than a dull one. A dull blade requires extra force and can slip. Hone your knife
+          before each use and sharpen it every few months.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🧅 Reduce Onion Tears</h3>
+        <p>Chill your onion for 15 minutes before cutting. Cold temperatures slow the release of compounds that irritate
+          your eyes. Always use a very sharp knife.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🧄 Peel Garlic Quickly</h3>
+        <p>Place a clove under the flat side of your knife and press firmly. The skin slips right off — fast and easy.
+        </p>
+      </div>
+
+      <br />
+      <h2 class="section-title">Heat &amp; Cooking</h2><br />
+      <div class="tip-card">
+        <h3>🔥 Preheat Your Pan</h3>
+        <p>Always preheat the pan before adding oil or food. A hot pan prevents sticking and gives better browning and
+          flavour.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🍳 Don't Crowd the Pan</h3>
+        <p>Too many ingredients at once drops the temperature and causes steaming instead of frying. Cook in batches for
+          best results.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🌡️ Use a Thermometer</h3>
+        <p>Check internal temperatures for meat — 75°C for chicken, 70°C for beef (medium). Guessing leads to over or
+          undercooked food.</p>
+      </div>
+
+      <br />
+      <h2 class="section-title">Flavour Tips</h2><br />
+      <div class="tip-card">
+        <h3>🧂 Salt at Every Stage</h3>
+        <p>Season as you cook, not just at the end. A pinch of salt when sautéing vegetables, pasta water, and finishing
+          builds deep flavour.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🍋 Use Acid to Brighten Dishes</h3>
+        <p>A squeeze of lemon or a dash of vinegar at the end lifts and brightens any dish without making it taste sour.
+        </p>
+      </div>
+      <div class="tip-card">
+        <h3>🌿 Time Your Herbs Right</h3>
+        <p>Hardy herbs like rosemary and thyme go in early. Delicate herbs like basil and coriander should only be added
+          at the very end or as garnish.</p>
+      </div>
+
+      <br />
+      <h2 class="section-title">Baking Basics</h2><br />
+      <div class="tip-card">
+        <h3>⚖️ Measure Precisely</h3>
+        <p>Baking is science. Use a kitchen scale for accuracy — especially for flour, which varies a lot depending on
+          how it's packed.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🧈 Use Room Temperature Ingredients</h3>
+        <p>Cold butter and eggs don't mix well and can cause batters to curdle. Take them out 30–60 minutes before
+          baking.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🎂 Don't Open the Oven Early</h3>
+        <p>Opening the door in the first 3/4 of baking time causes temperature drops that can make cakes sink. Wait
+          until the timer goes off.</p>
+      </div>
+
+      <br />
+      <p style="text-align:center;"><a href="recipes.html" class="btn btn-primary">Browse All Recipes</a></p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">🍳 Delicious Recipes</div>
+    <div class="footer-links"><a href="index.html">Home</a><a href="recipes.html">Recipes</a><a
+        href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    <p>© 2026 Aditya Joshi SAU. All Rights Reserved.</p>
+  </footer>
+  <a href="#" class="scroll-top" id="scrollTop">↑</a>
+  <script>window.addEventListener('scroll', function () { var b = document.getElementById('scrollTop'); b.style.opacity = window.scrollY > 300 ? '1' : '0'; b.style.pointerEvents = window.scrollY > 300 ? 'auto' : 'none'; });</script>
 </body>
+
 </html>
